@@ -1,0 +1,191 @@
+html,
+body
+{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+body
+{
+  overflow-x: hidden;
+  background: url('../images/bg.jpg') repeat top left;
+}
+
+h1
+{
+  font-size: 20px;
+  font-weight: normal;
+  color: #2e6e80;
+}
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/**
+  * z-index ordering of the different layers, do this for your layers,
+  * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
+  */
+.back
+{
+  z-index: 1;
+  width: 11200px;
+}
+.act {
+	z-index: 4;
+	position:absolute;
+	top: 0px;
+}
+@keyframes blur {
+  0% {
+    filter: blur(2px);
+  }
+	15%{filter: blur(0);
+	}
+ 	 100% {
+    filter: blur(0);
+  }
+}
+@-webkit-keyframes blur {
+  0% {
+    filter: blur(2px);
+  }
+	15%{filter: blur(0);
+	}
+ 	 100% {
+    filter: blur(0);
+  }
+}
+.blur {
+  -webkit-animation: blur 5s infinite;
+  animation: blur 5s infinite;
+}
+@keyframes tick {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  30% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+  60% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  80% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: rotate(0.5deg);
+    transform: rotate(0.5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes tick {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  30% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+  60% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  80% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: rotate(0.5deg);
+    transform: rotate(0.5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.tick {
+  -webkit-animation: tick 10s ease-out infinite;
+  animation: tick 10s ease-out infinite;
+}
+@keyframes wander-v {
+  0% {
+    -webkit-transform: translate(0, 10%);
+    transform: translate(0, 10%);
+  }
+ 2% {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+  }
+  100% {
+    -webkit-transform: translate(0,-20%);
+    transform: translate(0, -20%);
+  }
+}
+@-webkit-keyframes wander-v {
+   0% {
+    -webkit-transform: translate(0, 10%);
+    transform: translate(0, 10%);
+  }
+  2% {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+  }
+  100% {
+    -webkit-transform: translate(0,-20%);
+    transform: translate(0, -20%);
+  }
+}
+.wander-v {
+  -webkit-animation: wander-v 10s infinite ease-out;
+  animation: wander-v 10s infinite ease-out;
+}

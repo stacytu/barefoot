@@ -1,0 +1,680 @@
+/*!
+-----------------------------------------------------------------------------
+An A Friend of Mine Website
+Author: Michael Precel
+With Kirby CMS <3
+----------------------------------------------------------------------------- */
+img{
+	-o-object-fit:contain;
+	object-fit:contain;
+	margin:0;
+}
+@font-face{
+	font-family:'FZ-main';
+	src:url(../fonts/FZ-main.TTF);
+	font-weight:400;
+	font-style:normal;
+}
+*,::after,::before,html{
+	margin:0;
+	padding:0;
+	border:0;
+}
+html{
+	vertical-align:baseline;
+}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,footer,form,header,hgroup,i,iframe,ins,kbd,label,legend,li,mark,menu,nav,object,output,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,var,video{
+	margin:0;
+	padding:0;
+	border:0;
+	font:inherit;
+	vertical-align:baseline;
+}
+figure,h1,h2,h3,h4,h5,h6,img,ol,p,pre,ul{
+	padding:0;
+	border:0;
+	font:inherit;
+	vertical-align:baseline;
+}
+article,aside,details,figcaption,figure,header,hgroup,main,menu,nav,section,summary{
+	display:block
+}
+body{
+	line-height:1
+}
+ol,ul{
+	list-style:none
+}
+blockquote,q{
+	quotes:none
+}
+blockquote:after,blockquote:before,q:after,q:before{
+	content:none
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0
+}
+*,::after,::before{
+	box-sizing:border-box;
+	list-style:none
+}
+::-moz-selection{
+	background:#141314;
+	color:#f9f7ea
+}
+::selection{
+	background:#141314;
+	color:#f9f7ea
+}
+:root{
+	--vh-offset: 0px
+}
+html{
+	background:#2c2220;
+	color:#141314;
+	font:18px/26px "FZ-main",helvetica neue,sans-serif;
+	overflow-y:scroll;
+	cursor:default;
+	position:relative;
+	min-height:100%;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	-webkit-tap-highlight-color:rgba(145,73,52,.5);
+	overflow-x:hidden
+}
+img{
+	border-style:none;
+	max-width:100%;
+	max-height:60vh
+}
+button,figure,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
+	font-size:inherit;
+	line-height:inherit;
+	margin:0;
+	color:#141314
+}
+h1{
+	font-size:2rem;
+	text-align:center;
+	margin-bottom:2rem
+}
+button,p{
+	font-family:"archive",sans-serif,monospace;
+	font-style:normal;
+	font-weight:400;
+	font-size:1rem;
+	line-height:1.5rem;
+	margin-bottom:1.5rem
+}
+h2{
+	font-family:'FZ-main'helvetica neue,sans-serif;
+	font-size:1.25rem;
+	line-height:1.75rem;
+	margin:1.5rem 0;
+	text-indent:3rem
+}
+@media only screen and (min-width:768px){
+	#about p{font-family:"FZ-main",helvetica neue,sans-serif;
+		font-size:0.9rem;
+		line-height:1rem;
+		margin:1.5rem 0;
+	}
+}
+a{
+	color:inherit;
+	text-decoration:none
+}
+button{
+	background-color:transparent;
+	display:none
+}
+:focus{
+	outline:0
+}
+main,nav{
+	padding:2rem;
+	overflow:hidden
+}
+#illo div,main{
+	position:relative
+}
+main{
+	height:100vh;
+	height:calc(100vh - var(--vh-offset));
+	-webkit-overflow-scrolling:touch;
+	overflow-y:scroll;
+	width:100%;
+	background-color:#503017
+}
+footer{
+	display:none
+}
+.boxes{
+	padding:1.5rem 1.5rem 3rem;
+	position:absolute
+}
+#about{
+	background-color:#ffb260;
+	width:28rem;
+	top:24%
+}
+#info{
+	background-color:#914934;
+	width:30rem;
+	top:16%;
+	left:48%
+}
+#info img{
+	width: 100%;
+	
+}
+#bookings{
+	background-color:#39230e;
+	width:32rem;
+	top:7%;
+	left:63%;
+}
+#bookings p{
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+	margin-bottom: 0.75em;
+	color:bisque;
+}
+#illo p{
+	font-size:0.9rem;
+	text-align: left;
+	width: 100%;
+	padding: 5%;
+}
+#menus{
+	background-color:#feefdf;
+	width:28rem;
+	top:31%;
+	left:55%;
+	z-index:6
+}
+#illo{
+	background-color:#fff;
+	width:31rem;
+	top:35%;
+	left:27%;
+	padding-bottom:1.5rem;
+	z-index:7
+}
+#illo div{
+	text-align:center;
+	font-size:.75rem;
+	letter-spacing:.05em;
+	margin:0 auto
+}
+#illo .aspect-box{
+	background:#fff;
+	overflow-y:hidden
+}
+#illo .aspect-box::before{
+	content:"";
+	width:1px;
+	margin-left:-1px;
+	float:left;
+	height:0;
+	padding-top:150%
+}
+#illo .aspect-box::after{
+	content:"";
+	display:table;
+	clear:both
+}
+.drag{
+	cursor:url(../img/luo-cursor.png) 30 30,all-scroll;
+	/*cursor:-webkit-image-set(url( ../img/luo-cursor.png) 1x,url(../img/luo-cursor.png) 2x) 30 30,all-scroll*/
+}
+#booking-widget{
+	width:100%;
+	height:1100px;
+	margin-bottom:2rem;
+	overflow:hidden
+}
+#logo{
+	width:28rem;
+	left:18%;
+	top:32px;
+	-webkit-transition:width 300ms ease;
+	transition:width 300ms ease
+}
+#logo-placeholder{
+	display:none
+}
+#hamburger{
+	width:50px;
+	z-index:10;
+	cursor:pointer
+}
+h2.small{
+	text-transform:uppercase;
+	font-size:1.2rem;
+	line-height:1.5rem;
+	text-indent:0;
+	text-align:left;
+	margin-top:0;
+	margin-bottom:1rem;
+	color: antiquewhite;
+}
+#credit a{
+	color:black;
+}
+p.small{
+	font-size:1rem;
+	line-height:1.25rem;
+	text-align:center;
+	color:antiquewhite;
+}
+#ridic{
+	left:9%;
+	bottom:2rem;
+	width:350px;
+}
+#plonk{
+	left:40%;
+	top:23%
+}
+#credit{
+	right:25%;
+	top:25%
+}
+#illocredit{
+	right:15%;
+	bottom:10%
+}
+#book-btn a:hover{
+	text-decoration:underline
+}
+nav{
+	top:0;
+	left:-36%;
+	width:36%;
+	height:100%;
+	background-color:#fff;
+	z-index:90;
+	white-space:nowrap;
+	-webkit-transition:all 600ms cubic-bezier(.445,.05,.55,.95);
+	transition:all 600ms cubic-bezier(.445,.05,.55,.95)
+}
+#nav-inner-wrapper{
+	position:relative;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%
+}
+#close,.center{
+	position:absolute
+}
+#close{
+	width:30px;
+	z-index:99;
+	cursor:pointer
+}
+.bottom,.center,.top{
+	width:100%
+}
+.bottom h2,.top h2,p.small{
+	margin-bottom:0
+}
+.center{
+	top:50%;
+	transform:translateY(-50%)
+}
+.center h1:last-of-type{
+	margin-bottom:0
+}
+.bottom{
+	position:absolute;
+	bottom:0;
+	left:0
+}
+button.arrow{
+	margin-left:auto;
+	margin-right:auto;
+	width:100%
+}
+.arrow-ind{
+	font-family:"FZ-main",helvetica neue,sans-serif
+}
+#hamburger,#logo,.pin,nav{
+	position:fixed
+}
+/*! jQuery UI - v1.12.1 - 2018-07-30
+* http://jqueryui.com
+* Includes: draggable.css, core.css, accordion.css
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+.ui-draggable-handle{
+	-ms-touch-action:none;
+	touch-action:none
+}
+.ui-helper-hidden{
+	display:none
+}
+.ui-helper-hidden-accessible{
+	border:0;
+	clip:rect(0 0 0 0);
+	height:1px;
+	margin:-1px;
+	overflow:hidden;
+	padding:0;
+	position:absolute;
+	width:1px
+}
+.ui-helper-reset{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	line-height:1.3;
+	text-decoration:none;
+	font-size:100%;
+	list-style:none
+}
+.ui-helper-clearfix:after,.ui-helper-clearfix:before{
+	content:"";
+	display:table;
+	border-collapse:collapse
+}
+.ui-helper-clearfix:after{
+	clear:both
+}
+.ui-helper-zfix{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	position:absolute;
+	opacity:0;
+	filter:Alpha(Opacity=0)
+}
+.ui-front{
+	z-index:100
+}
+.ui-state-disabled{
+	cursor:default!important;
+	pointer-events:none
+}
+.ui-icon{
+	display:inline-block;
+	vertical-align:middle;
+	margin-top:-.25em;
+	position:relative;
+	text-indent:-99999px;
+	overflow:hidden;
+	background-repeat:no-repeat
+}
+.ui-widget-icon-block{
+	left:50%;
+	margin-left:-8px;
+	display:block
+}
+.ui-widget-overlay{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%
+}
+.ui-accordion .ui-accordion-header{
+	display:block;
+	cursor:pointer;
+	position:relative
+}
+.ui-accordion .ui-accordion-content{
+	overflow:auto
+}
+#booking-widget{
+	width:100%;
+	height:850px;
+	margin-bottom:2rem
+}
+@media only screen and (max-width:1440px){
+	html{
+		font-size:16px
+	}
+	#about,#bookings,#illo,#info,#menus{
+		width:25rem
+	}
+	#info{
+		left:55%
+	}
+	#menus{
+		left:65%;
+		z-index:0
+	}
+	#bookings{
+		left:73%
+	}
+}
+@media only screen and (max-width:1300px){
+	#about{
+		top:50%
+	}
+	#illo{
+		top:23%;
+		left:25%
+	}
+	#bookings{
+		top:50%
+	}
+	#info{
+		top:30%;
+		left:60%
+	}
+	#menus{
+		top:40%
+	}
+}
+@media only screen and (max-width:1150px){
+	nav{width:50%;left:-50%
+	}
+}
+@media only screen and (max-width:768px){
+	main{
+		overflow-y:scroll;
+		padding:0;
+		background-color:#503017
+	}
+	#hamburger,.pin{
+		display:none
+	}
+	.caption{
+		font-size:10px!important;
+		line-height:10px!important;
+		background-color:#fff
+	}
+	
+	.caption:first-of-type{
+		padding-top:8px
+	}
+	.caption:last-of-type{
+		padding-bottom:8px
+	}
+	#illo{
+		left:inherit
+	}
+	#illo,#logo{
+		top:inherit;
+		width:100%
+	}
+	#illo{
+		height:100vh;
+		height:calc(100vh - var(--vh-offset));
+		max-width:100%;
+		background-color:#985833;
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:-webkit-flex;
+		display:flex;
+		align-items:flex-end;
+		padding-bottom:3rem
+	}
+	#illo .illo-inner{
+		background-color:#fff;width:90%
+	}
+	#logo{
+		background-color:transparent;
+		position:fixed;
+		top:1.5rem;
+		left:50%!important;
+		transform:translateX(-50%);
+		width:calc(75% - 4rem);
+		z-index:999;
+		padding:0
+	}
+	#logo-placeholder{
+		display:block;
+		margin:1.5rem auto 0;
+		width:115px;
+		visibility:hidden
+	}
+	#boxes-wrapper{
+		height:100vh;
+		height:calc(100vh - var(--vh-offset));
+		background-color:#985833;
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:-webkit-flex;
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+		position:relative
+	}
+	#boxes-wrapper-inner{
+		margin-top:1.5rem
+	}
+	.boxes{
+		position:static;
+		padding-bottom:0
+	}
+	h1{
+		margin-bottom:.5rem
+	}
+	#about,#bookings,#info,#menus{
+		top:inherit;
+		left:inherit;
+		width:100%
+	}
+	button.arrow,footer{
+		display:block
+	}
+	footer{
+		margin-bottom:.75rem;
+		margin-top:1.5rem
+	}
+	footer h2.small,footer p.small{
+		font-size:14px;
+		line-height:16px;
+		margin-bottom:0
+	}
+	footer p:first-of-type{
+		margin-bottom:1rem
+	}
+}
+p.fixed-words {
+	text-align: left;
+	font-size:5px;
+	color:antiquewhite;
+}
+
+
+.bbc {
+	
+	width: auto;
+}
+
+.bbtitle {
+	
+}
+
+#bbtitle {
+	width: 70%;
+	margin-top: 10%;
+	margin-left: 10%;
+	
+}
+.boxes-inner {
+	padding: 5%;
+	
+}
+#menus .accordion img {
+	width: 60%;
+	margin: 5% auto;
+}
+
+.cf {
+	background-image:url(../img/luo-cf2.png);
+	background-size:contain;
+    background-repeat: no-repeat;
+	margin-top: -50%;
+	position: relative;
+	left: 25%;
+	width: 70%;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+ 
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+ 
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.fade {
+  -webkit-animation: fade 10s infinite linear;
+  animation: fade 10s infinite linear;
+}
+
+.license-content {
+	width: 90%;
+	padding: 0;
+	position:relative;
+	top:-10%;
+	}
+.license-content p{
+	color:#212121;
+	font-size:0.75rem;
+	position: relative;
+	right:18%;
+	text-align: left;
+}
+
+#about .accordion {
+	width: 45%;
+	margin: 5%;
+}
+#prev{
+	position:fixed;
+	right: 30%;
+	bottom: 10px;
+		}
+#home{
+	position:fixed;
+	right:20%;
+	bottom: 6px;
+		}
+#next{
+	position: fixed;
+	right:5%;
+	bottom:10px;
+		}

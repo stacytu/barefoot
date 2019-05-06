@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+
+<title>被遗忘的他们</title>
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<script>
+      var categoryId = null;
+    </script>
+<link href="../css/last-application.css" media="screen" rel="stylesheet" />
+<link href="../css/last-foundicons.css" media="screen" rel="stylesheet" />
+<link href="../css/aos.css" rel="stylesheet" type="text/css">
+<script src="../js/last-custom.js"></script>
+<script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2195009-29', 'auto'); // Playground
+  ga('create', 'UA-2195009-43', 'auto', {'name': 'studiosLevel'}); // Studios
+  ga('create', 'UA-2195009-33', 'auto', {'name': 'universityLevel'}); // University
+  ga('create', 'UA-2195009-2', 'auto', {'name': 'zurbLevel'}); // ZURB
+  
+  ga('send', 'pageview'); // Playground
+  ga('studiosLevel.send', 'pageview'); // Studios
+  ga('universityLevel.send', 'pageview'); // University
+  ga('zurbLevel.send', 'pageview'); // ZURB
+
+</script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="dPDGz6vEIzfu6WH4Y+GijnUZ9aQLMdwlGtoyaCnqjqw=" name="csrf-token" />
+<style type="text/css">
+	@font-face{
+	font-family: FZ-title;
+	src: url(../fonts/FZ-title.TTF);
+}
+@font-face{
+	font-family: FZ-main;
+	src: url(../fonts/FZ-main.TTF);
+}
+	p{
+font-family: FZ-main;
+	}
+  section[role="main"] {
+    background: url( ../img/last-bg.jpg) repeat;
+  }
+    section[role="main"] p a, li a {
+      color: #7E3200;
+    }
+    section[role="main"] p a:hover, li a:hover {
+      color: #461C00;
+    }
+  div#sidebarAd.cleanslate {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .CodeRay { background: rgba(255, 255, 255, 0.75); }
+  .row { overflow: visible }
+  .project-header { margin-bottom: 1em; }
+  
+  @media screen and (max-width: 767px) {
+    .polaroids li:nth-child(n+5) {
+      display: none;
+    }
+  }
+
+    ul.polaroids li { display: inline; }
+  	ul.polaroids a { background: #fff; display: inline; float: left; margin: 0 0 27px 30px; width: auto; padding: 10px 10px 15px; text-align: center; font-family: "Marker Felt", sans-serif; text-decoration: none; color: #333; font-size: 18px; -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); -webkit-transform: rotate(-2deg); -webkit-transition: -webkit-transform .15s linear; -moz-transform: rotate(-2deg); }
+	
+    ul.polaroids li {
+      padding-left: 0;
+    }
+    @media screen and (max-width: 768px) {
+      ul.polaroids li a {
+        margin-left: 0;
+      } 
+    }
+		ul.polaroids img { display: block; width: 290px; margin-bottom: 12px; }
+		ul.polaroids a:after { content: attr(title); }
+		
+		ul.polaroids li:nth-child(even) a { -webkit-transform: rotate(2deg);  -moz-transform: rotate(2deg); }
+		ul.polaroids li:nth-child(3n) a { -webkit-transform: none; position: relative; top: -5px;  -moz-transform: none; }
+		ul.polaroids li:nth-child(5n) a { -webkit-transform: rotate(5deg); position: relative; right: 5px;  -moz-transform: rotate(5deg); }
+		ul.polaroids li:nth-child(8n) a { position: relative; right: 5px; top: 8px; }
+		ul.polaroids li:nth-child(11n) a { position: relative; left: -5px; top: 3px; }
+		
+		ul.polaroids li.messy a {
+      margin-top: -400px;
+      position: relative;
+      left: 160px;
+    }
+	ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5); position: relative; z-index: 5; }
+	#github{
+		position: absolute;
+		bottom: 10px;
+		right: 5%;
+	}
+	#github img{
+		width:auto;
+		height:12vh;
+	}
+	#back{
+		position:absolute;
+		bottom: 15px;
+		right:15%;
+	}
+</style>
+
+</head>
+<body class="off-canvas hide-extras antialiased">
+<section role="main" class="body">
+<div class="row project-header">
+<div class="large-8 columns">
+<h1 style="font-family: FZ-title">被遗忘的他们</h1>
+<!--<p class="lead">In this playground adventure, we use some awesome CSS2 and CSS3 to turn an otherwise unassuming list of images into a full-blown set of polaroid pictures. Check out the demo and code snippets below. </p>-->
+<p class="faded">1982年田土下放，合作医疗也随之解散，随着包产到户，各卫生站也开始自负盈亏，没有了政府的统一管理和过问，乡村医生的收益难以保证。</p>
+</div>
+<div class="large-4 columns">
+<!--<script id="ZURBsmallAd" data-orientation="" src="https://zurb.com/ads/ZURBsmallAd.js"></script>-->
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns" style="overflow: visible">
+<ul class="polaroids large-block-grid-4 small-block-grid-2">
+<li>
+<a title="尹乃平" href="doctor-yinintroduction.html"><img alt="尹乃平" src="../img/last-fig1.png" /></a>
+</li>
+<li>
+<a title="姜秋菊" href="doctor-tang&jiang.html"><img alt="姜秋菊" src="../img/last-fig2.png" /></a>
+</li>
+<li>
+<a title="钟孝林" href="doctor-zhongintroduction.html"><img alt="钟孝林" src="../img/last-fig3.png" /></a>
+</li>
+<li>
+<a title="朱大叶" href="doctor-zhudaye.html"><img alt="朱大叶" src="../img/last-fig4.png" /></a>
+</li>
+<li>
+<a title="罗阳正" href="doctor-luo.html"><img alt="罗阳正" src="../img/last-fig5.png" /></a>
+</li>
+<li>
+<a title="刘地和"><img alt="刘地和" src="../img/last-fig6.png" /></a>
+</li>
+<li>
+<a title="刘天成" href="doctor-liutiancheng.html"><img alt="刘天成" src="../img/last-fig7.png" /></a>
+</li>
+<li>
+<a title="唐秀芬" href="doctor-tang&jiang.html"><img alt="唐秀芬" src="../img/last-fig8.png" /></a>
+</li>
+
+</ul>
+</div>
+</div>
+
+
+<div class="row">
+<div class="large-7 columns">
+<h2>他们的选择</h2>
+<p data-aos="fade-up">那年钟孝林的儿子面临升学，高中的开销压力不小，他在父亲的角色中总觉得亏欠孩子许多，连日连夜的工作使他没有时间过问孩子的学习和生活。</p>
+<p data-aos="fade-up">在工作和生活的冲突中，他选择南下深圳打工，为了孩子和家人更好的生活，先去赚些钱。那年，沙头村当地的政府决定自建医院和卫生院，解决乡村医生“单干”的问题。</p>
+<p data-aos="fade-up">医疗机构的运行规范等一系列问题需要熟悉事务的人来起草方案，大家想起了钟医生，在村民们眼中，他除了医术服人，还行事稳重、凡事细心，是卫生院重建工作的不二人选。</p>
+<p data-aos="fade-up">“当时领导让我自己开工资，不想让我委屈。唉，他们的困难我也都知道。”</p>
+<p data-aos="fade-up">他开不了这个口，只说跟大家的薪资一样就行，凡事按规定来。1985年他从深圳回来到现在，在卫生院又干了三十几年，当年的小钟也熬成了老钟。他起草的一系列规范、守则，修修改改，一直沿用至今。</p>
+
+<h3>此时的他们</h3>
+<p data-aos="fade-up">63岁的钟孝林依然坐诊卫生服务站，做些简单的接诊。他不是没有想过直接退休回家，但行医是他目前仅有的收入。</p>
+<p data-aos="fade-up">那年的改革，乡村老师归入体制，享受编制待遇，现在拿着丰厚的退休津贴，村医在包产到户的浪潮中，走上了自负盈亏的道路，而今也只能靠社保和卫生所的收入养老度日。</p>
+<p data-aos="fade-up">尹乃平也是，他现在在五星社区卫生服务站坐诊，每天的病人不多，吊水的病人来了，坐在宽敞的治疗室里，尹乃平就坐在一旁同他们聊聊天，观察着吊水的进度。夕阳余晖从窗口透进来，落在尹医生雪白的双鬓上，暖光冲淡了医疗器具的冰冷。62岁了，他看不到未来，就当在卫生站糊口，混口饭吃。</p>
+<p data-aos="fade-up">今年已经是姜秋菊离开工作岗位的第七个年头了，曾经“什么也不害怕的”她也开始为自己的年纪和能力担心：“我老了，医疗条件好了，96年之后，村里也不给接生孩子了，村医给不了出生证明。我也就是看些小毛病，帮孕妇检查，督促她们定期去城里的医院做系统的产检。”好在儿女孝顺，晚年也还有人服侍。</p>
+<p data-aos="fade-up">年逾古稀的刘天成也还坐诊自家诊所，“只要头脑清醒就一直在这里。”一来一旦他离开，这方圆几里也就没个看病的医生；二来他还得靠这爿诊所养家。</p>
+<p data-aos="fade-up">罗氏父子在得胜镇贯顶山村的卫生室坚守祖辈传承的事业，古旧的街道日渐冷清，罗阳正找不到医家的传人，在处方笺上写下平仄叶韵的无奈。罗亚平想着，还要靠着这间卫生室供两个女儿读书。</p>
+<p data-aos="fade-up">秀芬也不再接生了，娶了儿媳，嫁了女儿，现在她就在自家的诊所，看看小磕小碰、伤风感冒，“就当是挣点养老钱嘛。”</p>
+
+</div>
+<div class="large-5 columns">
+<ul class="polaroids" style="width: 380px;">
+<li>
+<a href="#" title="为病人贴膏药的唐秀芬">
+<img alt="秀芬" src="../img/last-01.jpg"/>
+</a> 
+</li>
+<li>
+<a href="#" title="罗阳正为病人开处方">
+<img alt="罗阳正" src="../img/last-02.jpg" />
+</a>
+</li>
+<li>
+<a href="#" title="刘天成坐诊自家诊所">
+<img alt="Brushed Aluminium" src="../img/last-03.jpg"/>
+</a>
+</li>
+<li>
+<a href="#" title="尹乃平为患者输液">
+<img alt="Brushed Aluminium" src="../img/last-04.jpg" />
+</a>
+</li>
+
+</ul>
+
+
+</div>
+</div>
+
+<section class="project-related">
+<div>
+<h2 class="text-center">
+  <video width="100%" height="auto" controls >
+    <source src="../video/last.mp4" type="video/mp4">
+  </video>
+</h2>
+
+</div>
+</section>
+
+<div class="zurb-footer-bottom">
+<div class="row">
+<p align="center" style="color: white">中国传媒大学 电视学院学生新媒体类毕业设计作品<br>
+融媒体作品 我是乡村医生</p>
+</div>
+<a href="https://github.com/stacytu/barefoot" target="new" id="github"><img src="../img/github.png" alt=""/></a>
+<a id="back" href="../index.html"><img src="../img/b-home.png" alt=""/></a>
+</div>
+
+</section>
+<script src="../js/yin/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
+
